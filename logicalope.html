@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators Demo</title>
+</head>
+<body>
+
+<h2>Logical Operators Demo</h2>
+
+<label for="num1">Enter the first number: </label>
+<input type="number" id="num1">
+
+<br>
+
+<label for="num2">Enter the second number: </label>
+<input type="number" id="num2">
+
+<br><br>
+
+<button onclick="checkConditions()">Check Conditions</button>
+
+<br><br>
+
+<p id="result"></p>
+
+<script>
+    function checkConditions() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+
+        var condition1 = num1 > 0 && num2 < 10;
+        var condition2 = num1 === 0 || num2 === 10;
+        var condition3 = !(num1 === num2);
+        var resultMessage = `
+            Condition 1 (num1 > 0 AND num2 < 10): ${condition1}<br>
+            Condition 2 (num1 === 0 OR num2 === 10): ${condition2}<br>
+            Condition 3 (NOT num1 === num2): ${condition3}
+        `;
+        document.getElementById("result").innerHTML = resultMessage;
+    }
+</script>
+
+</body>
+</html>

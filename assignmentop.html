@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operators Demo</title>
+</head>
+<body>
+
+<h2>Assignment Operators Demo</h2>
+
+<label for="number">Enter a number: </label>
+<input type="number" id="number">
+
+<br><br>
+
+<button onclick="performOperations()">Perform Operations</button>
+
+<br><br>
+
+<p id="result"></p>
+
+<script>
+    function performOperations() {
+        var inputNumber = parseFloat(document.getElementById("number").value);
+
+        var result = inputNumber;
+
+        result = inputNumber;
+        result += 5;
+        result -= 3;
+        result *= 2;
+        result /= 4;
+        var resultMessage = `Result after operations: ${result}`;
+        document.getElementById("result").innerHTML = resultMessage;
+    }
+</script>
+
+</body>
+</html>
